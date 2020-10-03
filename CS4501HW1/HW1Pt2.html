@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Not-So-Sketch UX</title>
+  <link rel='stylesheet' href='HW1.css' type='text/css' />
+</head>
+<body>
+  <ul class="nav">
+    <li>
+    <a href="HW1.html" target="_blank">Home</a>
+    </li>
+    <li>Not-So-Sketch UX Jobs</li>
+    <li><a href="HW1Pt4.html" target="_blank">Create Account</a>
+    </li>
+  </ul>
+
+  <br>
+
+  <ul id="slides">
+    <li class="slide showing">Instructions To Apply:</li>
+    <li class="slide">Don't Forget!!</li>
+    <li class="slide">1. Create Account</li>
+    <li class="slide">2. Personal Info</li>
+    <li class="slide">3. Select Interview Time</li>
+  </ul>
+
+  <script>
+    // Where are the slides linking to?
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0; // Iterator for the slides - which slide are we on?
+    // How long will each slide run for?
+    var slideInterval = setInterval(nextSlide,2000);
+
+    // this function takes the variables listed above 
+    // and moves the slide forward
+    function nextSlide() {
+      slides[currentSlide].className = 'slide';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'slide showing';
+    }
+
+  </script>
+
+  <br>
+  <br>
+
+  <div class="info">
+    <h1 class="heading", style="background-color: #FFFF00"> Personal Info
+    </p>
+
+  </h1>
+    <form>
+      <textarea placeholder="First Name"></textarea>
+      <textarea placeholder="Username (from previous page)"></textarea>
+      <textarea placeholder="Last Name"></textarea>
+      <textarea placeholder="Describe yourself here..."></textarea>
+      <p style="background-color: #FFFF00">Let's see if you're compatible enough to work with us! If you don't know your life path number, add up all the digits in your birthday until it is reduced to one number. For example, 01/01/2000 should reduce to 4, which is your life path number.</p>
+      <textarea placeholder="Life Path Number"></textarea>
+    </form>
+  </div>
+
+  <div class="boxed">
+    <a href="HW1Pt5.html">SUBMIT APPLICATION</a><br/>
+  </div>
+
+  <br>
+
+  <div>
+    <h1 class="heading", style="background-color: #FFFF00"> Interview Schedule
+    </p>
+    </h1>
+    <p style="background-color: #FFFF00"> Select a time that works for you! </p>
+    <a href="HW1Pt3.html"><button type="button">11am</button></a>
+    <a href="HW1Pt3.html"><button type="button">11:30am</button></a>
+    <a href="HW1Pt3.html"><button type="button">12pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">12:30pm</button></a>
+
+    <a href="HW1Pt6.html"><button type="button">1pm</button></a>
+
+    <a href="HW1Pt3.html"><button type="button">1:30pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">2pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">2:30pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">3pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">3:30pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">4pm</button></a>
+    <a href="HW1Pt3.html"><button type="button">4:30pm</button></a>
+  </div>
+  
+
+</body>
+</html>
